@@ -1,0 +1,42 @@
+<%- include("../partials/header")%>
+
+    <%- include("../partials/navbar")%>
+
+
+        <div class="container" style="margin-top:3rem;width:80vw">
+            <form class="validated-form" action="/login" method="POST" style="width: 90%; margin: 10px auto"
+                novalidate>
+                <%- include("../partials/flash")%>
+                <h4 class="display-4">Login </h4>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username" name="username"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+
+                </div>
+            
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="number" class="form-control" id="price" placeholder="Password" name="password"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Login</button>
+        
+                <button type="submit" class=" btn alert alert-info"><a href="/register">Create New Account</a></button>
+
+
+            </form>
+
+
+        </div>
+
+
+
+        <%- include("../partials/footer")%>

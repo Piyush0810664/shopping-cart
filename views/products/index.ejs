@@ -1,0 +1,40 @@
+<%- include("../partials/header")%>
+
+
+    <%- include("../partials/navbar")%>
+
+       
+
+            <main class="container">
+
+                <%- include("../partials/flash")%>
+            
+                <section >
+                   
+                    <h2 id="shoppingbag"> <i class="fas fa-shopping-basket" style="color:blueviolet; font-size:50px"></i> Shopping Cart</h2>
+                </section>
+                <div class="row products">
+                    <%for(let product of products){%>
+                        <div class="col-lg-3">
+                            <div class="card" style="width: 18rem; height:400px; margin:10px; text-align: center;  ">
+                                <img src=<%=product.img%> id="logo" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%=product.name%>
+                                    </h5>
+                                    <p class="card-text">
+                                        <%=product.desc.substring(0,70)%>
+                                    </p>
+                                    <a href="/products/<%=product._id%>" class="btn btn-primary">More info</a>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <% }%>
+
+
+                </div>
+                </div>
+            </main>
+                <%- include("../partials/footer")%>

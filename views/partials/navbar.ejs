@@ -1,0 +1,49 @@
+
+
+
+<nav id="navbar" class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <i class="fas fa-shopping-bag" style="margin-right: 5px; font-size: 30px; color:#f7b538"></i>
+    <a class="navbar-brand" href="/products">Shopping Cart</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/products/new" tabindex="-1" aria-disabled="true">New</a>
+
+        </li>
+
+      </ul>
+
+
+      <div class="navbar-nav ml-auto">
+
+        <%if(!currentUser){%>
+          <a class="nav-link active " href="/login">Login</a>
+
+          <%}else{%>
+            <a class="nav-link active text-capitalize " href="#">Hey <%=currentUser.username%></a>
+            <a class="nav-link active " href="#"><i class="fas fa-shopping-cart style"
+                style="color:rgb(0, 162, 255); font-size:30px"></i>
+              <sup><span class="badge bg-danger">1</span></sup> </a>
+
+            <a class="nav-link active" href="/logout">Logout</a>
+
+            <%}%>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</nav>

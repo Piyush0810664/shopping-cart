@@ -1,0 +1,112 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+#navbar{
+    background-color: #fb5607;
+    font-weight: bold;
+    font-family: 'Farro', sans-serif;
+    font-size: 1.1rem;
+}
+
+#navbar  a {
+    color:white;
+}
+
+#navbar a:hover{
+
+    color:black;
+    
+}
+
+
+.card{
+    margin:16px;
+    height: 500px;
+    box-shadow: 0px 1px 2px grey;
+
+}
+.card img{
+    padding:15px;
+    height: 50%;
+}
+
+
+
+#onlineshopping{
+
+    display: flex;
+    align-items: center;
+
+}
+#imagepart{
+    width:500px;
+    height: 400px;
+}
+
+#imagepart img{
+   width:90%;
+   height:90%;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients::before {
+    
+    content: "";
+    background: url("https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864__340.jpg") center center/cover;
+    position: absolute;
+    width:100%;
+    height: 130px;
+
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+#client-section h1 {
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#clients img {
+    height: 80px;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+
+#shoppingbag{
+    color:#ff477e;
+    font-size: 3rem;
+    margin-top:10px;
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#showbox1{
+    border: 2px solid black;
+    display:flex;
+    align-items: center;
+    padding:20px;
+    margin-top:5px;
+
+}
+
+
+.btn{
+    border-radius: 8px;
+    margin:4px;
+    padding:5px;
+    font-size:1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
