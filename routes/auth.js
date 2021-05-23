@@ -48,16 +48,36 @@ router.post('/login',
             failureFlash: true
         }),
     (req, res) => {
-        req.flash('success', 'Welcome Back!!!')
-        //console.log(req.user)
-        // user ki sari information padi hogi req.user me
-        res.redirect('/products')
+
+        try {
+            req.flash('success', 'Welcome Back!!!')
+            //console.log(req.user)
+            // user ki sari information padi hogi req.user me
+            res.redirect('/products')
+        }
+
+        catch (e) {
+            console.log(e.message);
+            req.flash('error', ' Oops still an error');
+            res.redirect('/error')
+
+        }
+
     })
 
 router.get('/logout', (req, res) => {
-    req.logout();
-    req.flash('success', 'Logged Out')
-    res.redirect('/login');
+
+    try {
+        req.logout();
+        req.flash('success', 'Logged Out')
+        res.redirect('/login');
+    }
+    catch (e) {
+        console.log(e.message);
+        req.flash('error', ' Oops still an error');
+        res.redirect('/error')
+    }
+
 })
 
 
